@@ -1,0 +1,143 @@
+body {
+  height: 100%;
+  display: block;
+  /* position: -webkit-sticky; */
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+}
+
+/* intro start */
+
+img {
+  height: 2rem;
+  width: 2rem;
+  margin: 2rem auto;
+}
+.intro {
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.title {
+  color: azure;
+}
+
+.sub-title {
+  color: azure;
+}
+
+.start-btn-div {
+  display: flex;
+  justify-content: center;
+}
+.start-btn {
+  height: 3.5em;
+  width: 20em;
+  margin: 2em;
+}
+
+/* question & answer start */
+
+.question {
+  margin: 3rem 3rem 2rem 3rem;
+  color: azure;
+}
+
+.option-btn-div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-btn:focus,
+.option-btn:active {
+  outline: none;
+  outline-offset: none;
+  box-shadow: none;
+}
+
+.option-btn {
+  height: 2.5em;
+  width: 15rem;
+  margin: 0.5em;
+}
+
+.question-progress {
+  margin: 3rem 10rem;
+  position: relative;
+  display: block;
+}
+
+.progress-bar {
+  height: 1px;
+}
+
+.question-count {
+  margin-top: 3rem;
+  color: goldenrod;
+  font-size: 1.3rem;
+}
+
+/* loading start */
+.loading-upper {
+  /* for strange number display, color change */
+  color: black;
+}
+
+/* result start */
+.result {
+  max-width: 100%;
+  margin: 3rem 1rem 1rem 1rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-value {
+  margin: 1rem 0.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-break: normal;
+}
+
+.result-header {
+  margin: 1rem 0.5rem;
+  color: azure;
+}
+
+.result-image {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem auto;
+}
+
+.share-title {
+  margin: 1.5rem 1.5rem;
+  color: azure;
+}
+
+.share-btn {
+  display: inline;
+  margin: 3rem 1rem;
+}
+
+.re-test-btn {
+  display: inline;
+  margin: 3rem 1rem;
+}
+
+/* result guide start */
+
+.guide-desc {
+  color: azure;
+  margin: 10rem 5rem 5rem 5rem;
+}

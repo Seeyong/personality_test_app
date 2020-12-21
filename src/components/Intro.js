@@ -86,7 +86,7 @@ class Intro extends Component {
                         <Switch>
                             {/* add query string here */}
                             <Route
-                                path={this.props.location.pathname + this.state.result_url}
+                                path={this.state.result_url} // this.props.location.pathname + 
                                 component={() => <Result answers={this.state.answers}/>
                             } exact/>
                             <Redirect to={this.state.result_url} />

@@ -17,7 +17,7 @@ constructor(props){
       <Router basename="/personality_test_app/">
         <Switch>
           <Route path={this.state.test_main_url} component={Intro} exact/> {/* go to "Intro" page */}
-          <Route path={this.state.test_main_url + 'relationtype/result/'} component={ResultToIntro} exact/> {/* go to "Result to Start" page */}
+          <Route path={this.state.test_main_url + 'result/'} component={ResultToIntro} exact/> {/* go to "Result to Start" page */}
           {/* go to "Each Result" page with query string by using for loop */}
         </Switch>
       </Router>

@@ -83,16 +83,22 @@ class Intro extends Component {
             return(
                 <div>
                     <Router basename={this.state.quiz_url}>
+                        {/* add query string here */}
+                        <Redirect to={this.state.result_url} />
+                        <Result answers={this.state.answers}/>
+                    </Router>
+                    {/* Router doesn't work in github page
+                    <Router basename={this.state.quiz_url}>
                         <Switch>
-                            {/* add query string here */}
+                            
                             <Route
                                 path={this.state.result_url} // this.props.location.pathname + 
                                 component={() => <Result answers={this.state.answers}/>
                             } exact/>
                             <Redirect to={this.state.result_url} />
                         </Switch>
-                    </Router>
-                </div>   
+                    </Router> */}
+                </div> 
             )   
         }
     }

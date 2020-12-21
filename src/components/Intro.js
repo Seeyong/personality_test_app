@@ -22,6 +22,7 @@ class Intro extends Component {
             quizNumber:0,
             answers:answer_obj,
             result_url:'result',
+            quiz_url:"/personality_test_app/relationtype/",
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
     }
@@ -81,7 +82,7 @@ class Intro extends Component {
             // go to result page
             return(
                 <div>
-                    <Router basename="/personality_test_app/">
+                    <Router basename={this.state.quiz_url}>
                         <Switch>
                             {/* add query string here */}
                             <Route

@@ -81,7 +81,7 @@ class Intro extends Component {
             // go to result page
             return(
                 <div>
-                    <Router>
+                    <Router basename="/personality_test_app/">
                         <Switch>
                             {/* add query string here */}
                             <Route

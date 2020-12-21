@@ -14,7 +14,7 @@ constructor(props){
 
   render() {
     return(
-      <Router basename={"/personality_test_app/" + this.state.test_main_url}>
+      <Router basename="/personality_test_app/">
         <Switch>
           <Route path={this.state.test_main_url} component={Intro} exact/> {/* go to "Intro" page */}
           <Route path={this.state.test_main_url + 'result/'} component={ResultToIntro} exact/> {/* go to "Result to Start" page */}

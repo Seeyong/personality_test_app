@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import Intro from './Intro'
-import quizResults from '../api/quizResults'
 import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 import Flower from '../ico-flower.png'
 import { Button } from 'react-bootstrap';
@@ -47,14 +46,14 @@ class Result extends Component {
                 <div className="share">
                     <h5 className="share-title">공유하기</h5>
                     <div className="share-btn">
-                        <CopyToClipboard text={this.state.sharable_url+"result"}>
+                        <CopyToClipboard text={this.state.sharable_url+"result/"+this.props.result.query}>
                             <Button 
-                                variant="light"
+                                variant="dark"
                                 onClick={function(){alert("링크가 복사됐어요!")}}>링크</Button>
                         </CopyToClipboard>
                     </div>
                     <div className="re-test-btn">
-                        <Button onClick={this._onBackToStartButtonClick} className="retest-btn" variant="light">테스트 다시하기</Button>
+                        <Button onClick={this._onBackToStartButtonClick} className="retest-btn" variant="dark">테스트 다시하기</Button>
                     </div>
                 </div>
             </div>
@@ -63,18 +62,8 @@ class Result extends Component {
     }
 
     resultRender(){
-        // -----------------------------
-        console.log(this.props.scores)
-        let final_score = this.props.scores;
-        var final_score_type = "";
-        var final_score_desc = "";
-        // searching for final score and matching with type
-        for (var i = 0; i < quizResults.length; i++){
-            if(quizResults[i].score_range.includes(final_score)){
-                final_score_type = quizResults[i].type
-                final_score_desc = quizResults[i].desc
-            }
-        }
+        let final_score_type = this.props.result.type
+        let final_score_desc = this.props.result.desc
 
         // return final result option
         return (

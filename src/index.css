@@ -2,7 +2,7 @@ body {
   height: 100%;
   display: block;
   /* position: -webkit-sticky; */
-  background-color: black;
+  background-color: #fbf7f2;
   text-align: center;
   justify-content: center;
 }
@@ -20,11 +20,11 @@ img {
 }
 
 .title {
-  color: azure;
+  color: black;
 }
 
 .sub-title {
-  color: azure;
+  color: black;
 }
 
 .start-btn-div {
@@ -41,7 +41,7 @@ img {
 
 .question {
   margin: 3rem 3rem 2rem 3rem;
-  color: azure;
+  color: black;
 }
 
 .question-p {
@@ -84,14 +84,14 @@ img {
 
 .question-count {
   margin-top: 3rem;
-  color: azure;
+  color: black;
   font-size: 1.3rem;
 }
 
 /* loading start */
 .loading-upper {
   /* for strange number display, color change */
-  color: black;
+  color: #fbf7f2;
 }
 
 /* result start */
@@ -128,7 +128,7 @@ img {
 
 .result-header {
   margin: 1rem 0.5rem;
-  color: azure;
+  color: black;
 }
 
 .result-image {
@@ -139,7 +139,7 @@ img {
 
 .share-title {
   margin: 1.5rem 1.5rem;
-  color: azure;
+  color: black;
 }
 
 .share-btn {
@@ -155,6 +155,6 @@ img {
 /* result guide start */
 
 .guide-desc {
-  color: azure;
+  color: black;
   margin: 10rem 5rem 5rem 5rem;
 }

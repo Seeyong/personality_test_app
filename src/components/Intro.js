@@ -5,7 +5,7 @@ import Loading from './Loading'
 import quizQuestions from '../api/quizQuestions'
 import quizResults from '../api/quizResults'
 import Flower from '../ico-flower.png'
-import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Redirect} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 class Intro extends Component {
@@ -22,7 +22,7 @@ class Intro extends Component {
             qAndA:quizQuestions,
             quizNumber:0,
             counted_score:0, // < ------------- for calculating scores
-            result_url:'result',
+            result_url:'result/',
             quiz_url:"/personality_test_app/relationtype/",
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
@@ -44,7 +44,7 @@ class Intro extends Component {
                     <div className="start-btn-div">
                         <Button
                             onClick={this._onStartButtonClick}
-                            variant="light"
+                            variant="dark"
                             size="lg"
                             className="start-btn"
                             bsPrefix="btn"
@@ -55,6 +55,14 @@ class Intro extends Component {
         );
     }
 
+    resultCaculator(){
+        let final_score = this.state.counted_score;
+        for (var i = 0; i < quizResults.length; i++){
+            if(quizResults[i].score_range.includes(final_score)){
+                return quizResults[i];
+            }
+        }
+    }
     quizPageRender(){
         if(this.state.mode === "quiz"){
             let _page = <Quiz
@@ -85,12 +93,14 @@ class Intro extends Component {
             )
         } else if(this.state.mode === "result"){
             // go to result page
+            let result_contents = this.resultCaculator();
+            let final_score_query = result_contents.query // <----------------query export
             return(
                 <div>
                     <Router basename={this.state.quiz_url}>
                         {/* add query string here */}
-                        <Redirect to={this.state.result_url} />
-                        <Result scores={this.state.counted_score}/>
+                        <Redirect to={this.state.result_url+final_score_query} />
+                        <Result result={result_contents}/>
                     </Router>
                     {/* Router doesn't work in github page
                     <Router basename={this.state.quiz_url}>

@@ -34,7 +34,7 @@ class ResultToIntro extends Component {
                     아래 버튼을 눌러 연애 심리 테스트를 해보세요!
                 </div>
                 <div className="guide-re-test-btn">
-                    <Button onClick={this._onBackToStartButtonClick} className="retest-btn" variant="light">테스트 다시하기</Button>
+                    <Button onClick={this._onBackToStartButtonClick} className="retest-btn" variant="dark">테스트 다시하기</Button>
                 </div>
             </div>
             

@@ -4,7 +4,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: '그래도 친구가 간만에 만나자는데 봐야지뭐, \n "어디서볼래?"'
             },
             {
@@ -24,7 +24,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "남자친구와 주말에 걸어다니면서 소소한 데이트하기"
             },
             {
@@ -44,7 +44,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "밥먹고 샤워를 한 뒤 밀린 방 청소나 할일을 찾아 움직인다."
             },
             {
@@ -64,7 +64,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "집에 있는 건 너무 심심해! \n 친구들한테 만나자며 먼저 연락한다."
             },
             {
@@ -84,7 +84,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "으 시간이 왤케 안가.. \n 주변 친구들에게 연락해서 나갈 각잡기"
             },
             {
@@ -104,7 +104,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "배달은 별로, 난 맛집 탐방가임"
             },
             {
@@ -124,7 +124,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "아,,어쩔 수 없지 하면서 바로 만날 친구에게 전화를 건다."
             },
             {
@@ -144,7 +144,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "휴 이렇게 집에만 있으니 좀 그렇다..\n 라고 생각하며 당장 뭘 배워야할지 찾아보고 상담예약을 잡아본다."
             },
             {
@@ -164,7 +164,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "옷은 전 날에 미리 골라놨으니 메이크업, 헤어 등 섬세하게 꾸민다"
             },
             {
@@ -184,7 +184,7 @@ var quizQuestions = [
         answers:[
             {
                 type: "사자",
-                score: 2.5,
+                score: 2,
                 content: "10분 전에 미리 도착해 친구들을 기다린다."
             },
             {

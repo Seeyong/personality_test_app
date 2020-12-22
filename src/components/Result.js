@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Intro from './Intro'
 import quizResults from '../api/quizResults'
 import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
@@ -65,46 +65,57 @@ class Result extends Component {
     resultRender(){
         // if-else for #1 direct from url(queryString) #2 proper quiz pregress
         // -----------------------------
-
-        var final_result = this.props.answers;
-        // calculate max count for final result
-        var keys = Object.keys(final_result);
-        var max = final_result[keys[0]];
-        var i;
-        var max_keys = [];
-        // below is for & from quizResults component
-        var max_result_type = "";
-        var max_result_desc = "";
-
-        for (i = 1; i < keys.length; i++) {
-            var value = final_result[keys[i]];
-            if (value > max) max = value            
-        }
-        // searching for max count answer types
-        for (var key of keys) {
-            if(final_result[key] === max){
-                max_keys.push(key)
+        console.log(this.props.scores)
+        let final_score = this.props.scores;
+        var final_score_type = "";
+        var final_score_desc = "";
+        // searching for final score and matching with type
+        for (var i = 0; i < quizResults.length; i++){
+            if(quizResults[i].score_range.includes(final_score)){
+                final_score_type = quizResults[i].type
+                final_score_desc = quizResults[i].desc
             }
         }
-        // searching for max result's type & desc
-        for (i = 0; i < quizResults.length; i++){
-            if(max_keys[0] === quizResults[i].type){
-                max_result_type = quizResults[i].type
-                max_result_desc = quizResults[i].desc
-            }
-        }
+
+        // var final_result = this.props.answers;
+        // // calculate max count for final result(in TYPE version)
+        // var keys = Object.keys(final_result);
+        // var max = final_result[keys[0]];
+        // var i;
+        // var max_keys = [];
+        // // below is for & from quizResults component
+        // var max_result_type = "";
+        // var max_result_desc = "";
+
+        // for (i = 1; i < keys.length; i++) {
+        //     var value = final_result[keys[i]];
+        //     if (value > max) max = value            
+        // }
+        // // searching for max count answer types
+        // for (var key of keys) {
+        //     if(final_result[key] === max){
+        //         max_keys.push(key)
+        //     }
+        // }
+        // // searching for max result's type & desc
+        // for (i = 0; i < quizResults.length; i++){
+        //     if(max_keys[0] === quizResults[i].type){
+        //         max_result_type = quizResults[i].type
+        //         max_result_desc = quizResults[i].desc
+        //     }
+        // }
         
 
         // return final result option
         return (
-            <div>
-                <h3>
-                    {max_result_type}
+            <Fragment>
+                <h3 className="result-header">
+                    {final_score_type}
                 </h3>
-                <p>
-                    {max_result_desc}
+                <p className="result-p">
+                    {final_score_desc}
                 </p>
-            </div>
+            </Fragment>
                 
         )
     }

@@ -20,7 +20,8 @@ class Intro extends Component {
             mode:'intro',
             qAndA:quizQuestions,
             quizNumber:0,
-            answers:answer_obj,
+            counted_score:0, // < ------------- for calculating scores
+            answers:answer_obj, // <------------ {사자:0 너구리:0}
             result_url:'result',
             quiz_url:"/personality_test_app/relationtype/",
         }
@@ -59,12 +60,15 @@ class Intro extends Component {
             qAndA={this.state.qAndA}
             quizNum={this.state.quizNumber}
             onChangeMode={
-                function(_quizNum, _answer, _mode) {
-                var _answers = Object.assign({}, this.state.answers);
-                _answers[_answer] = _answers[_answer] + 1;
+                function(_quizNum, _score, _mode) {
+                // <below for counting answers with TYPE(사자 너구리 펭귄 etc.)>
+                // var _answers = Object.assign({}, this.state.answers);
+                // _answers[_answer] = _answers[_answer] + 1;
+                let _scores = this.state.counted_score + Number(_score)
                 this.setState({
                     quizNumber:_quizNum,
-                    answers:_answers,
+                    // answers:_answers, <----- for counting answers with TYPE
+                    counted_score:_scores,
                     mode:_mode
                 })
             }.bind(this)}></Quiz>
@@ -85,7 +89,7 @@ class Intro extends Component {
                     <Router basename={this.state.quiz_url}>
                         {/* add query string here */}
                         <Redirect to={this.state.result_url} />
-                        <Result answers={this.state.answers}/>
+                        <Result scores={this.state.counted_score}/>
                     </Router>
                     {/* Router doesn't work in github page
                     <Router basename={this.state.quiz_url}>

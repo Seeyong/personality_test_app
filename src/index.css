@@ -44,6 +44,11 @@ img {
   color: azure;
 }
 
+.question-p {
+  /* white space for line break */
+  white-space: pre-line;
+}
+
 .option-btn-div {
   position: relative;
   display: flex;
@@ -60,9 +65,11 @@ img {
 }
 
 .option-btn {
-  height: 2.5em;
-  width: 15rem;
+  font-size: 0.5rem;
+  height: 7em;
+  width: 20rem;
   margin: 0.5em;
+  word-break: break-all;
 }
 
 .question-progress {
@@ -77,7 +84,7 @@ img {
 
 .question-count {
   margin-top: 3rem;
-  color: goldenrod;
+  color: azure;
   font-size: 1.3rem;
 }
 
@@ -107,6 +114,16 @@ img {
   justify-content: center;
   align-items: center;
   word-break: normal;
+}
+
+.result-header {
+  margin: 5rem auto;
+}
+
+.result-p {
+  white-space: pre-line;
+  font-size: 0.8rem;
+  margin: 1.5rem auto;
 }
 
 .result-header {

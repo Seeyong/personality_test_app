@@ -22,7 +22,7 @@ class Quiz extends Component {
             _questions.push(
                 <Button
                     key={i}
-                    value={qAndA.answers[i].type}
+                    value={qAndA.answers[i].score} // <-----------사자 너구리 펭귄 : [i].type
                     onClick={function(e) {
                         e.preventDefault();
                         if(this.props.quizNum === quizQuestions.length-1){

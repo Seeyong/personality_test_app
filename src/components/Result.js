@@ -46,7 +46,7 @@ class Result extends Component {
                 <div className="share">
                     <h5 className="share-title">공유하기</h5>
                     <div className="share-btn">
-                        <CopyToClipboard text={this.state.sharable_url+"result/"+this.props.result.query}>
+                        <CopyToClipboard text={this.state.sharable_url+"/result/"+this.props.result.query}>
                             <Button 
                                 variant="dark"
                                 onClick={function(){alert("링크가 복사됐어요!")}}>링크</Button>

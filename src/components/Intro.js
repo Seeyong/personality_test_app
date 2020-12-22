@@ -3,6 +3,7 @@ import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
 import quizQuestions from '../api/quizQuestions'
+import quizResults from '../api/quizResults'
 import Flower from '../ico-flower.png'
 import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
@@ -21,7 +22,6 @@ class Intro extends Component {
             qAndA:quizQuestions,
             quizNumber:0,
             counted_score:0, // < ------------- for calculating scores
-            answers:answer_obj, // <------------ {사자:0 너구리:0}
             result_url:'result',
             quiz_url:"/personality_test_app/relationtype/",
         }
@@ -34,6 +34,7 @@ class Intro extends Component {
     }
 
     introPageRender(){
+        // <-------------------------------------test/answer template automation
         return (
             <div className="intro container">
                 <img src={Flower} alt="rea"/>

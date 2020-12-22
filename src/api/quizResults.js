@@ -26,7 +26,7 @@ var quizResults = [
         type: "초보 집콕러",
         desc: "집에 있으면 있지만 심심하면 집 밖을 나가고 싶어하는 초보집콕러~ \n 아직은 집이랑 서먹서먹한 42~ \n 이틀이상 집에 있으면 나가고 싶어서 안달난 마치 라푼젤같은 그대! \n 집에 있다가도 나오라면 바로 나오는 오케이맨~!",
         query: "chqhwlqzhrfj",
-        score_range:[...Array(26).keys()],
+        score_range:range(26),
     },
     {
         type: "선택형 집콕러",

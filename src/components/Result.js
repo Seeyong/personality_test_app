@@ -63,7 +63,6 @@ class Result extends Component {
     }
 
     resultRender(){
-        // if-else for #1 direct from url(queryString) #2 proper quiz pregress
         // -----------------------------
         console.log(this.props.scores)
         let final_score = this.props.scores;
@@ -76,35 +75,6 @@ class Result extends Component {
                 final_score_desc = quizResults[i].desc
             }
         }
-
-        // var final_result = this.props.answers;
-        // // calculate max count for final result(in TYPE version)
-        // var keys = Object.keys(final_result);
-        // var max = final_result[keys[0]];
-        // var i;
-        // var max_keys = [];
-        // // below is for & from quizResults component
-        // var max_result_type = "";
-        // var max_result_desc = "";
-
-        // for (i = 1; i < keys.length; i++) {
-        //     var value = final_result[keys[i]];
-        //     if (value > max) max = value            
-        // }
-        // // searching for max count answer types
-        // for (var key of keys) {
-        //     if(final_result[key] === max){
-        //         max_keys.push(key)
-        //     }
-        // }
-        // // searching for max result's type & desc
-        // for (i = 0; i < quizResults.length; i++){
-        //     if(max_keys[0] === quizResults[i].type){
-        //         max_result_type = quizResults[i].type
-        //         max_result_desc = quizResults[i].desc
-        //     }
-        // }
-        
 
         // return final result option
         return (

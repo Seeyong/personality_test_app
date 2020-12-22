@@ -14,7 +14,7 @@ const defaultOptions = {
 class Loading extends Component {
     render(){
         return(
-            <div className="loading" style={{marginTop: '10rem'}}>
+            <div className="loading" >
                 <Lottie options={defaultOptions} height={120} width={120}/>
             </div>
         )

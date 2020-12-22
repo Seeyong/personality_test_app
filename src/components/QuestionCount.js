@@ -7,7 +7,7 @@ class QuestionCount extends Component {
         return(
             <div className="question-progress">
                 <div className='progress-bar' >
-                    <ProgressBar now={this.props.quizCount / this.props.totalCount * 100} variant="warning" />
+                    <ProgressBar now={this.props.quizCount / this.props.totalCount * 100} variant="danger" />
                 </div>
                 <div className="question-count">
                     {this.props.quizCount+1} of {this.props.totalCount}

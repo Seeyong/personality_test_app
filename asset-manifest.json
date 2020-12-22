@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/personality_test_app/static/css/main.5117273a.chunk.css",
-    "main.js": "/personality_test_app/static/js/main.57ed5c4a.chunk.js",
-    "main.js.map": "/personality_test_app/static/js/main.57ed5c4a.chunk.js.map",
+    "main.js": "/personality_test_app/static/js/main.42356762.chunk.js",
+    "main.js.map": "/personality_test_app/static/js/main.42356762.chunk.js.map",
     "runtime-main.js": "/personality_test_app/static/js/runtime-main.d04cfc4c.js",
     "runtime-main.js.map": "/personality_test_app/static/js/runtime-main.d04cfc4c.js.map",
     "static/js/2.4485a6ad.chunk.js": "/personality_test_app/static/js/2.4485a6ad.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.d04cfc4c.js",
     "static/js/2.4485a6ad.chunk.js",
     "static/css/main.5117273a.chunk.css",
-    "static/js/main.57ed5c4a.chunk.js"
+    "static/js/main.42356762.chunk.js"
   ]
 }

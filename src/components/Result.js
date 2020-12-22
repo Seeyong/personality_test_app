@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Intro from './Intro'
 import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
-import Flower from '../ico-flower.png'
+import Logo from '../k_test_logo.png'
 import { Button } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
@@ -9,7 +9,6 @@ class Result extends Component {
     constructor(props){
         super(props)
         this.state = {
-            sample_result_desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
             mode:"result",
             test_main_url:'/relationtype/',
             sharable_url:window.location.href,
@@ -36,9 +35,9 @@ class Result extends Component {
         return(
             <div className="result">
                 <div className="result-header">
+                <img src={Logo} className="result-image" alt="result_img"/>
                     <h3 className="result-title">Result!</h3>
                     <p className="result-desc">당신의 성향은</p>
-                    <img src={Flower} className="result-image" alt="result_img"/>
                     <div className="result-value">
                         {this.resultRender()}
                     </div>

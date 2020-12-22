@@ -11,6 +11,7 @@ constructor(props){
   super(props)
   this.state = {
     test_main_url:'/relationtype/',
+    result_route:'result/',
   }
 }
 
@@ -19,10 +20,13 @@ constructor(props){
       <Router basename="/personality_test_app/">
         <Switch>
           <Route path={this.state.test_main_url} component={Intro} exact/> {/* go to "Intro" page */}
-          <Route path={this.state.test_main_url + 'result/'} component={ResultToIntro} exact/> {/* go to "Result to Start" page */}
-          {/* go to "Each Result" page with query string by using for loop */}
-          {quizResults.map((item) => (
-            <Route path={this.state.test_main_url + 'result/' + item.query} component={() => <Result result={item}/>} exact/>
+          <Route path={this.state.test_main_url + this.state.result_route} component={ResultToIntro} exact/> {/* go to "Result to Start" page */}
+          {/* go to "Each Result" page */}
+          {quizResults.map((item, index) => (
+            <Route
+              path={this.state.test_main_url + this.state.result_route + item.query}
+              component={() => <Result result={item}/>}
+              key={index} exact/>
           ))}
         </Switch>
       </Router>

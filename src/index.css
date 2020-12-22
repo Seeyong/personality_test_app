@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&family=Do+Hyeon&display=swap");
 body {
   height: 100%;
   display: block;
@@ -16,25 +17,38 @@ img {
 }
 .intro {
   margin: 5rem auto;
-  text-align: center;
+}
+
+.logo-img {
+  float: center;
+  height: 5.5rem;
+  width: 5rem;
 }
 
 .title {
   color: black;
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .sub-title {
   color: black;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.btn-positioner {
+  margin: 7rem;
+  display: block;
 }
 
 .start-btn-div {
   display: flex;
   justify-content: center;
+  margin: 2rem;
+  font-family: "Do Hyeon", sans-serif;
 }
 .start-btn {
   height: 3.5em;
-  width: 20em;
-  margin: 2em;
+  width: 20rem;
 }
 
 /* question & answer start */
@@ -42,6 +56,7 @@ img {
 .question {
   margin: 3rem 3rem 2rem 3rem;
   color: black;
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .question-p {
@@ -65,11 +80,14 @@ img {
 }
 
 .option-btn {
-  font-size: 0.5rem;
+  font-family: "Cute Font", cursive;
+  font-weight: bolder;
+  font-size: 1rem;
   height: 7em;
   width: 20rem;
   margin: 0.5em;
   word-break: break-all;
+  white-space: pre-line;
 }
 
 .question-progress {
@@ -86,6 +104,7 @@ img {
   margin-top: 3rem;
   color: black;
   font-size: 1.3rem;
+  font-family: "Do Hyeon", sans-serif;
 }
 
 /* loading start */
@@ -120,13 +139,23 @@ img {
   margin: 5rem auto;
 }
 
+.result-title {
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.result-desc {
+  font-family: "Do Hyeon", sans-serif;
+}
+
 .result-p {
+  font-family: "Cute Font", cursive;
   white-space: pre-line;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 1.5rem auto;
 }
 
 .result-header {
+  font-family: "Do Hyeon", sans-serif;
   margin: 1rem 0.5rem;
   color: black;
 }
@@ -138,16 +167,19 @@ img {
 }
 
 .share-title {
+  font-family: "Do Hyeon", sans-serif;
   margin: 1.5rem 1.5rem;
   color: black;
 }
 
 .share-btn {
+  font-family: "Do Hyeon", sans-serif;
   display: inline;
   margin: 3rem 1rem;
 }
 
 .re-test-btn {
+  font-family: "Do Hyeon", sans-serif;
   display: inline;
   margin: 3rem 1rem;
 }

@@ -4,7 +4,8 @@ import Result from './Result'
 import Loading from './Loading'
 import quizQuestions from '../api/quizQuestions'
 import quizResults from '../api/quizResults'
-import Flower from '../ico-flower.png'
+import quizTitles from '../api/quizTitles'
+import Logo from '../k_test_logo.png'
 import { BrowserRouter as Router, Redirect} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
@@ -34,13 +35,13 @@ class Intro extends Component {
     }
 
     introPageRender(){
-        // <-------------------------------------test/answer template automation
         return (
             <div className="intro container">
-                <img src={Flower} alt="rea"/>
-                <h1 className='title'>취향 분석 테스트</h1>
+                <img className='logo-img' src={Logo} alt="rea"/>
+                <h1 className='title'>{quizTitles.mainTitle}</h1>
                 <div>    
-                    <h5 className='sub-title'>코로나 집콕 테스트</h5>
+                    <h5 className='sub-title'>{quizTitles.subTitle}</h5>
+                    <div className='btn-positioner'></div>
                     <div className="start-btn-div">
                         <Button
                             onClick={this._onStartButtonClick}

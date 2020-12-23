@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
@@ -6,8 +6,9 @@ import quizQuestions from '../api/quizQuestions'
 import quizResults from '../api/quizResults'
 import quizTitles from '../api/quizTitles'
 import Logo from '../k_test_logo.png'
-import { BrowserRouter as Router, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Redirect } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import Typist from 'react-typist';
 
 class Intro extends Component {
     constructor(props){
@@ -28,6 +29,7 @@ class Intro extends Component {
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
     }
+
     _onStartButtonClick(){
         this.setState({
             mode:'quiz'
@@ -38,19 +40,24 @@ class Intro extends Component {
         return (
             <div className="intro container">
                 <img className='logo-img' src={Logo} alt="rea"/>
-                <h1 className='title'>{quizTitles.mainTitle}</h1>
-                <div>    
-                    <h5 className='sub-title'>{quizTitles.subTitle}</h5>
-                    <div className='btn-positioner'></div>
-                    <div className="start-btn-div">
-                        <Button
-                            onClick={this._onStartButtonClick}
-                            variant="dark"
-                            size="lg"
-                            className="start-btn"
-                            bsPrefix="btn"
-                        >시작하기</Button>
-                    </div>
+                <h1 className='title'>{quizTitles.mainTitle}</h1>  
+                <h5 className='sub-title'>{quizTitles.subTitle}</h5>
+                <div className='btn-positioner'></div>
+                <Typist className="start-btn-participants">
+                    현재 총 1,402,052명이 참여했어요.
+                </Typist>
+                <div className="start-btn-div">
+                    <Button
+                        onClick={this._onStartButtonClick}
+                        variant="dark"
+                        size="lg"
+                        className="start-btn"
+                        bsPrefix="btn"
+                    >시작하기
+                    </Button>
+                </div>
+                <div className="intro-footer">
+                    <p>MAKER - 케이테스트</p>
                 </div>
             </div>
         );
@@ -97,9 +104,8 @@ class Intro extends Component {
             let result_contents = this.resultCaculator();
             let final_score_query = result_contents.query // <----------------query export
             return(
-                <div>
+                <Fragment>
                     <Router basename={this.state.quiz_url}>
-                        {/* add query string here */}
                         <Redirect to={this.state.result_url+final_score_query} />
                         <Result result={result_contents}/>
                     </Router>
@@ -114,16 +120,16 @@ class Intro extends Component {
                             <Redirect to={this.state.result_url} />
                         </Switch>
                     </Router> */}
-                </div> 
+                </Fragment> 
             )   
         }
     }
     
     render(){
         return (
-            <div>
+            <Fragment>
                 {this.state.mode === "intro" ? this.introPageRender() : this.quizPageRender()}
-            </div>
+            </Fragment>
         );
     }
 }

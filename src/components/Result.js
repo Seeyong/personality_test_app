@@ -54,6 +54,9 @@ class Result extends Component {
                         <Button onClick={this._onBackToStartButtonClick} className="retest-btn" variant="dark">테스트 다시하기</Button>
                     </div>
                 </div>
+                <div className="intro-footer">
+                    <p>MAKER - 케이테스트</p>
+                </div>
             </div>
             
         );

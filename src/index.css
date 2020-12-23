@@ -51,6 +51,19 @@ img {
   width: 20rem;
 }
 
+.start-btn-participants {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.intro-footer {
+  margin: 6rem auto;
+  font-family: "Do Hyeon", sans-serif;
+  color: grey;
+  opacity: 50%;
+}
+
 /* question & answer start */
 
 .question {
@@ -82,11 +95,11 @@ img {
 .option-btn {
   font-family: "Nanum Gothic", sans-serif;
   font-weight: bolder;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   height: 7em;
   width: 20rem;
   margin: 0.5em;
-  word-break: break-all;
+  word-break: keep-all;
   white-space: pre-line;
 }
 

@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Intro from './Intro'
 import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 import Logo from '../k_test_logo.png'
-import { Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 class Result extends Component {
@@ -10,7 +10,7 @@ class Result extends Component {
         super(props)
         this.state = {
             mode:"result",
-            test_main_url:'/relationtype/',
+            test_main_url:'/zipkok/',
             sharable_url:window.location.href,
         }
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
@@ -36,19 +36,18 @@ class Result extends Component {
             <div className="result">
                 <div className="result-header">
                 <img src={Logo} className="result-image" alt="result_img"/>
-                    <h3 className="result-title">Result!</h3>
-                    <p className="result-desc">당신의 성향은</p>
+                    <h5 className="result-title">당신의 성향은</h5>
                     <div className="result-value">
                         {this.resultRender()}
                     </div>
                 </div>
                 <div className="share">
-                    <h5 className="share-title">공유하기</h5>
+                    <h5 className="share-title">친구에게 공유하기</h5>
                     <div className="share-btn">
                         <CopyToClipboard text={this.state.sharable_url+"result/"+this.props.result.query}>
                             <Button 
                                 variant="dark"
-                                onClick={function(){alert("링크가 복사됐어요!")}}>링크</Button>
+                                onClick={function(){alert("링크가 복사됐어요!")}}>링크 복사</Button>
                         </CopyToClipboard>
                     </div>
                     <div className="re-test-btn">
@@ -67,12 +66,14 @@ class Result extends Component {
         // return final result option
         return (
             <Fragment>
-                <h3 className="result-header">
-                    {final_score_type}
-                </h3>
-                <p className="result-p">
-                    {final_score_desc}
-                </p>
+                <Card className="result-card" bg="light">
+                    <Card.Header className="result-header">
+                        {final_score_type}
+                    </Card.Header>
+                    <Card.Body className="result-p">
+                        <Card.Text>{final_score_desc}</Card.Text>
+                    </Card.Body>
+                </Card>
             </Fragment>
                 
         )

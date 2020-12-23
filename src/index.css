@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cute+Font&family=Do+Hyeon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Do+Hyeon&display=swap");
 body {
   height: 100%;
   display: block;
@@ -80,9 +80,9 @@ img {
 }
 
 .option-btn {
-  font-family: "Cute Font", cursive;
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 0.5rem;
   height: 7em;
   width: 20rem;
   margin: 0.5em;
@@ -101,7 +101,7 @@ img {
 }
 
 .question-count {
-  margin-top: 3rem;
+  margin-top: 1rem;
   color: black;
   font-size: 1.3rem;
   font-family: "Do Hyeon", sans-serif;
@@ -140,6 +140,10 @@ img {
   word-break: normal;
 }
 
+.result-card {
+  width: 20rem;
+}
+
 .result-header {
   margin: 5rem auto;
 }
@@ -148,14 +152,11 @@ img {
   font-family: "Do Hyeon", sans-serif;
 }
 
-.result-desc {
-  font-family: "Do Hyeon", sans-serif;
-}
-
 .result-p {
-  font-family: "Cute Font", cursive;
+  font-family: "Nanum Gothic", sans-serif;
   white-space: pre-line;
-  font-size: 1rem;
+  word-break: keep-all;
+  font-size: 0.7rem;
   margin: 1.5rem auto;
 }
 

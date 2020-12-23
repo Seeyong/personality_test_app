@@ -10,7 +10,7 @@ class App extends Component {
 constructor(props){
   super(props)
   this.state = {
-    test_main_url:'/relationtype/',
+    test_main_url:'/zipkok/',
     result_route:'result/',
   }
 }

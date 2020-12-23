@@ -24,7 +24,7 @@ class Intro extends Component {
             quizNumber:0,
             counted_score:0, // < ------------- for calculating scores
             result_url:'result/',
-            quiz_url:"/personality_test_app/relationtype/",
+            quiz_url:"/personality_test_app/zipkok/",
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
     }

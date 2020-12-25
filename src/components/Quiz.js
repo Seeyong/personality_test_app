@@ -11,7 +11,25 @@ class Quiz extends Component {
             quizCount:0,
         }
     }
-
+    // the function below is for option randomize
+    arrayShuffler(array){
+        var currentIndex = array.length, temporaryValue, randomIndex;
+          
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+        
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+        
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        
+        return array;
+    }
     renderAnswerOptions(){
         var qAndA = null;
         qAndA = this.props.qAndA[this.props.quizNum];
@@ -39,9 +57,9 @@ class Quiz extends Component {
                     size="lg"
                     className="option-btn"
                 >{qAndA.answers[i].content}</Button>)
-            
             i = i + 1;
         }
+        _questions = this.arrayShuffler(_questions)
         return(
             _questions
         )

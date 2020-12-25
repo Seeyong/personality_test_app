@@ -39,7 +39,7 @@ class Quiz extends Component {
         while(i < qAndA.answers.length){
             // random option push 
             _questions.push(
-                <Button
+                <button
                     key={i}
                     value={qAndA.answers[i].score} 
                     onClick={function(e) {
@@ -56,7 +56,7 @@ class Quiz extends Component {
                     variant="outline-dark" 
                     size="lg"
                     className="option-btn"
-                >{qAndA.answers[i].content}</Button>)
+                >{qAndA.answers[i].content}</button>)
             i = i + 1;
         }
         _questions = this.arrayShuffler(_questions)

@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Do+Hyeon&display=swap");
+:root {
+  --bg-color: #fbf7f2;
+}
 body {
   height: 100%;
   display: block;
   /* position: -webkit-sticky; */
-  background-color: #fbf7f2;
+  background-color: --bg-color;
   text-align: center;
   justify-content: center;
 }
@@ -90,7 +93,7 @@ img {
   outline: none;
   outline-offset: none;
   box-shadow: none;
-  background-color: #fbf7f2;
+  background-color: --bg-color;
   color: black;
 }
 
@@ -130,7 +133,7 @@ img {
 
 .loading-upper {
   /* for strange number display, color change */
-  color: #fbf7f2;
+  color: --bg-color;
 }
 
 /* result start */

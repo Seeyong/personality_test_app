@@ -89,6 +89,7 @@ class Intro extends Component {
             quizNum={this.state.quizNumber}
             onChangeMode={
                 function(_quizNum, _score, _mode) {
+                // e.preventDefault();
                 // <below for counting answers with TYPE(사자 너구리 펭귄 etc.)>
                 // var _answers = Object.assign({}, this.state.answers);
                 // _answers[_answer] = _answers[_answer] + 1;

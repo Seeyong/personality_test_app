@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personality_test_app/static/css/main.183aea2c.chunk.css",
+    "main.css": "/personality_test_app/static/css/main.caaa1294.chunk.css",
     "main.js": "/personality_test_app/static/js/main.b153f8c5.chunk.js",
     "main.js.map": "/personality_test_app/static/js/main.b153f8c5.chunk.js.map",
     "runtime-main.js": "/personality_test_app/static/js/runtime-main.982701cf.js",
@@ -10,14 +10,14 @@
     "static/js/3.41748a1c.chunk.js": "/personality_test_app/static/js/3.41748a1c.chunk.js",
     "static/js/3.41748a1c.chunk.js.map": "/personality_test_app/static/js/3.41748a1c.chunk.js.map",
     "index.html": "/personality_test_app/index.html",
-    "static/css/main.183aea2c.chunk.css.map": "/personality_test_app/static/css/main.183aea2c.chunk.css.map",
+    "static/css/main.caaa1294.chunk.css.map": "/personality_test_app/static/css/main.caaa1294.chunk.css.map",
     "static/js/2.d3e0d565.chunk.js.LICENSE.txt": "/personality_test_app/static/js/2.d3e0d565.chunk.js.LICENSE.txt",
     "static/media/k_test_logo.7d0fe144.png": "/personality_test_app/static/media/k_test_logo.7d0fe144.png"
   },
   "entrypoints": [
     "static/js/runtime-main.982701cf.js",
     "static/js/2.d3e0d565.chunk.js",
-    "static/css/main.183aea2c.chunk.css",
+    "static/css/main.caaa1294.chunk.css",
     "static/js/main.b153f8c5.chunk.js"
   ]
 }

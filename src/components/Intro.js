@@ -2,30 +2,38 @@ import React, { Component, Fragment } from 'react';
 import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
-import quizQuestions from '../api/quizQuestions'
-import quizResults from '../api/quizResults'
-import quizTitles from '../api/quizTitles'
+import TESTS from '../api/TESTS'
 import Logo from '../k_test_logo.png'
-import { BrowserRouter as Router, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
 
 class Intro extends Component {
     constructor(props){
         super(props)
+        let _current_test = [];
+        let i = 0;
+        while (i<TESTS.length) {
+            if(TESTS[i].info.mainUrl === this.props.test){
+                _current_test = TESTS[i]
+                break
+            }
+            i = i + 1
+        }
         // create answer option object for counting each question's answer
-        var answer_obj = {};
-        var i = 0;
-        for(i=0;i<quizQuestions[0].answers.length;i++) {
-        answer_obj[quizQuestions[0].answers[i].type] = 0;
-        };
+        // var answer_obj = {};
+        // var j = 0;
+        // for(j=0;j<quizQuestions[0].answers.length;j++) {
+        // answer_obj[quizQuestions[0].answers[j].type] = 0;
+        // };
         this.state = {
             mode:'intro',
-            qAndA:quizQuestions,
+            current_test:_current_test,
+            qAndA:_current_test.questions,
             quizNumber:0,
             counted_score:0, // < ------------- for calculating scores
-            result_url:'result/',
-            quiz_url:"/personality_test_app/zipkok/",
+            result_url:'/result/',
+            quiz_url:window.location.href,
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
     }
@@ -37,11 +45,14 @@ class Intro extends Component {
     }
 
     introPageRender(){
+        let _mainTitle = this.state.current_test.info.mainTitle;
+        let _subTitle = this.state.current_test.info.subTitle;
+        
         return (
             <div className="intro container">
                 <img className='logo-img' src={Logo} alt="rea"/>
-                <h1 className='title'>{quizTitles.mainTitle}</h1>  
-                <h5 className='sub-title'>{quizTitles.subTitle}</h5>
+                <h1 className='title'>{_mainTitle}</h1>  
+                <h5 className='sub-title'>{_subTitle}</h5>
                 <div className='btn-positioner'></div>
                 <Typist className="start-btn-participants">
                     현재 총 1,402,052명이 참여했어요.
@@ -65,9 +76,9 @@ class Intro extends Component {
 
     resultCaculator(){
         let final_score = this.state.counted_score;
-        for (var i = 0; i < quizResults.length; i++){
-            if(quizResults[i].score_range.includes(final_score)){
-                return quizResults[i];
+        for (let k = 0; k < this.state.current_test.results.length; k++){
+            if(this.state.current_test.results[k].score_range.includes(final_score)){
+                return this.state.current_test.results[k];
             }
         }
     }
@@ -103,24 +114,26 @@ class Intro extends Component {
             // go to result page
             let result_contents = this.resultCaculator();
             let final_score_query = result_contents.query // <----------------query export
+            
             return(
-                <Fragment>
-                    <Router basename={this.state.quiz_url}>
-                        <Redirect to={this.state.result_url+final_score_query} />
-                        <Result result={result_contents}/>
-                    </Router>
-                    {/* Router doesn't work in github page
-                    <Router basename={this.state.quiz_url}>
-                        <Switch>
+
+                <Router basename={"/personality_test_app/"+this.state.current_test.info.mainUrl}>
+                    <Route path={this.state.result_url+final_score_query} component={Result}/>
+                    <Redirect to={this.state.result_url+final_score_query} />
+                    {/* <Result result={result_contents}/> */}
+                </Router>
+                    // Router doesn't work in github page
+                    // <Router basename={this.state.quiz_url}>
+                    //     <Switch>
                             
-                            <Route
-                                path={this.state.result_url} // this.props.location.pathname + 
-                                component={() => <Result answers={this.state.answers}/>
-                            } exact/>
-                            <Redirect to={this.state.result_url} />
-                        </Switch>
-                    </Router> */}
-                </Fragment> 
+                    //         <Route
+                    //             path={this.state.result_url} // this.props.location.pathname + 
+                    //             component={() => <Result answers={this.state.answers}/>
+                    //         } exact/>
+                    //         <Redirect to={this.state.result_url} />
+                    //     </Switch>
+                    // </Router>
+
             )   
         }
     }

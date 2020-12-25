@@ -19,6 +19,7 @@ class Quiz extends Component {
         var i = 0;
         var nextQuizNum = this.props.quizNum + 1;
         while(i < qAndA.answers.length){
+            // random option push 
             _questions.push(
                 <Button
                     key={i}

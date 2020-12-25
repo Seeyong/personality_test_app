@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/personality_test_app/static/css/main.fdfd5979.chunk.css",
-    "main.js": "/personality_test_app/static/js/main.a945d69e.chunk.js",
-    "main.js.map": "/personality_test_app/static/js/main.a945d69e.chunk.js.map",
-    "runtime-main.js": "/personality_test_app/static/js/runtime-main.d8f78c9b.js",
-    "runtime-main.js.map": "/personality_test_app/static/js/runtime-main.d8f78c9b.js.map",
-    "static/js/2.3341d1ee.chunk.js": "/personality_test_app/static/js/2.3341d1ee.chunk.js",
-    "static/js/2.3341d1ee.chunk.js.map": "/personality_test_app/static/js/2.3341d1ee.chunk.js.map",
-    "static/js/3.dc265368.chunk.js": "/personality_test_app/static/js/3.dc265368.chunk.js",
-    "static/js/3.dc265368.chunk.js.map": "/personality_test_app/static/js/3.dc265368.chunk.js.map",
+    "main.css": "/personality_test_app/static/css/main.8517f9de.chunk.css",
+    "main.js": "/personality_test_app/static/js/main.e16202a7.chunk.js",
+    "main.js.map": "/personality_test_app/static/js/main.e16202a7.chunk.js.map",
+    "runtime-main.js": "/personality_test_app/static/js/runtime-main.982701cf.js",
+    "runtime-main.js.map": "/personality_test_app/static/js/runtime-main.982701cf.js.map",
+    "static/js/2.d3e0d565.chunk.js": "/personality_test_app/static/js/2.d3e0d565.chunk.js",
+    "static/js/2.d3e0d565.chunk.js.map": "/personality_test_app/static/js/2.d3e0d565.chunk.js.map",
+    "static/js/3.41748a1c.chunk.js": "/personality_test_app/static/js/3.41748a1c.chunk.js",
+    "static/js/3.41748a1c.chunk.js.map": "/personality_test_app/static/js/3.41748a1c.chunk.js.map",
     "index.html": "/personality_test_app/index.html",
-    "static/css/main.fdfd5979.chunk.css.map": "/personality_test_app/static/css/main.fdfd5979.chunk.css.map",
-    "static/js/2.3341d1ee.chunk.js.LICENSE.txt": "/personality_test_app/static/js/2.3341d1ee.chunk.js.LICENSE.txt",
+    "static/css/main.8517f9de.chunk.css.map": "/personality_test_app/static/css/main.8517f9de.chunk.css.map",
+    "static/js/2.d3e0d565.chunk.js.LICENSE.txt": "/personality_test_app/static/js/2.d3e0d565.chunk.js.LICENSE.txt",
     "static/media/k_test_logo.7d0fe144.png": "/personality_test_app/static/media/k_test_logo.7d0fe144.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d8f78c9b.js",
-    "static/js/2.3341d1ee.chunk.js",
-    "static/css/main.fdfd5979.chunk.css",
-    "static/js/main.a945d69e.chunk.js"
+    "static/js/runtime-main.982701cf.js",
+    "static/js/2.d3e0d565.chunk.js",
+    "static/css/main.8517f9de.chunk.css",
+    "static/js/main.e16202a7.chunk.js"
   ]
 }

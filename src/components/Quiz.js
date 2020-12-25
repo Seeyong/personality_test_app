@@ -3,6 +3,7 @@ import QuestionCount from './QuestionCount'
 import Question from './Question'
 import quizQuestions from '../api/quizQuestions'
 import { Button } from 'react-bootstrap';
+import { Fragment } from 'react';
 
 class Quiz extends Component {
     constructor(props){
@@ -39,8 +40,8 @@ class Quiz extends Component {
         while(i < qAndA.answers.length){
             // random option push 
             _questions.push(
-                <button
-                    key={i}
+                <Button
+                    key={this.props.quizNum-i}
                     value={qAndA.answers[i].score} 
                     onClick={function(e) {
                         e.preventDefault();
@@ -56,7 +57,7 @@ class Quiz extends Component {
                     variant="outline-dark" 
                     size="lg"
                     className="option-btn"
-                >{qAndA.answers[i].content}</button>)
+                >{qAndA.answers[i].content}</Button>)
             i = i + 1;
         }
         _questions = this.arrayShuffler(_questions)

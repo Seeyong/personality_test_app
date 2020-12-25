@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Do+Hyeon&display=swap");
 :root {
   --bg-color: #fbf7f2;
+  --font-color: black;
+  --title-font: "Do Hyeon", sans-serif;
+  --content-font: "Nanum Gothic", sans-serif;
 }
 body {
   height: 100%;
   display: block;
   /* position: -webkit-sticky; */
-  background-color: --bg-color;
+  background-color: var(--bg-color);
   text-align: center;
   justify-content: center;
 }
@@ -29,13 +32,13 @@ img {
 }
 
 .title {
-  color: black;
-  font-family: "Do Hyeon", sans-serif;
+  color: var(--font-color);
+  font-family: var(--title-font);
 }
 
 .sub-title {
-  color: black;
-  font-family: "Do Hyeon", sans-serif;
+  color: var(--font-color);
+  font-family: var(--title-font);
 }
 
 .btn-positioner {
@@ -47,7 +50,7 @@ img {
   display: flex;
   justify-content: center;
   margin: 2rem;
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
 }
 .start-btn {
   height: 3.5em;
@@ -57,12 +60,12 @@ img {
 .start-btn-participants {
   margin-top: 0.5rem;
   font-size: 1rem;
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
 }
 
 .intro-footer {
   margin: 6rem auto;
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
   color: grey;
   opacity: 50%;
 }
@@ -71,8 +74,8 @@ img {
 
 .question {
   margin: 3rem 3rem 2rem 3rem;
-  color: black;
-  font-family: "Do Hyeon", sans-serif;
+  color: var(--font-color);
+  font-family: var(--title-font);
 }
 
 .question-p {
@@ -93,12 +96,12 @@ img {
   outline: none;
   outline-offset: none;
   box-shadow: none;
-  background-color: --bg-color;
-  color: black;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 .option-btn {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: var(--content-font);
   font-weight: bolder;
   font-size: 0.8rem;
   height: 7em;
@@ -120,9 +123,9 @@ img {
 
 .question-count {
   margin-top: 1rem;
-  color: black;
+  color: var(--font-color);
   font-size: 1.3rem;
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
 }
 
 /* loading start */
@@ -133,7 +136,7 @@ img {
 
 .loading-upper {
   /* for strange number display, color change */
-  color: --bg-color;
+  color: var(--bg-color);
 }
 
 /* result start */
@@ -167,11 +170,11 @@ img {
 }
 
 .result-title {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
 }
 
 .result-p {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: var(--content-font);
   white-space: pre-line;
   word-break: keep-all;
   font-size: 0.7rem;
@@ -179,9 +182,9 @@ img {
 }
 
 .result-header {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
   margin: 1rem 0.5rem;
-  color: black;
+  color: var(--font-color);
 }
 
 .result-logo-image {
@@ -197,19 +200,19 @@ img {
 }
 
 .share-title {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
   margin: 0rem 1.5rem 1.5rem 1.5rem;
-  color: black;
+  color: var(--font-color);
 }
 
 .share-btn {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
   display: inline;
   margin: 3rem 1rem;
 }
 
 .re-test-btn {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
   display: inline;
   margin: 3rem 1rem;
 }
@@ -217,6 +220,6 @@ img {
 /* result guide start */
 
 .guide-desc {
-  color: black;
+  color: var(--font-color);
   margin: 10rem 5rem 5rem 5rem;
 }

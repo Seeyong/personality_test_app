@@ -104,7 +104,7 @@ img {
   font-family: var(--content-font);
   font-weight: bolder;
   font-size: 0.8rem;
-  height: 7em;
+  height: 9em;
   width: 20rem;
   margin: 0.5em;
   word-break: keep-all;
@@ -170,6 +170,7 @@ img {
 }
 
 .result-p {
+  text-align: left;
   font-family: var(--content-font);
   white-space: pre-line;
   word-break: keep-all;

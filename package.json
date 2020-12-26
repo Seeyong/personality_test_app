@@ -25,8 +25,8 @@
     "eject": "react-scripts eject",
     "cname": "echo www.custom.domain > build\\CNAME",
     "nojekyll": "echo > build\\.nojekyll",
-    "predeploy": "npm run build && npm run cname && npm run nojekyll",
-    "deploy": "gh-pages --add --dotfiles -d build"
+    "predeploy": "npm run build && cp CNAME build/CNAME",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -165,10 +165,6 @@ img {
   width: 20rem;
 }
 
-.result-header {
-  margin: 5rem auto;
-}
-
 .result-title {
   font-family: var(--title-font);
 }
@@ -182,6 +178,7 @@ img {
 }
 
 .result-header {
+  margin: 5rem auto;
   font-family: var(--title-font);
   margin: 1rem 0.5rem;
   color: var(--font-color);
@@ -197,6 +194,8 @@ img {
   height: auto;
   width: 18rem;
   margin: 1rem auto 0rem;
+  font-family: var(--title-font);
+  color: var(--font-color);
 }
 
 .share-title {

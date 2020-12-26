@@ -101,10 +101,10 @@ class Result extends Component {
         return (
             <Fragment>
                 <Card className="result-card" bg="light">
-                    <Card.Img variant='top' src={img_src} className='result-img'/>
-                    <Card.Header className="result-header">
+                    <Card.Img variant='top' src={img_src} className='result-img' alt={final_type} />
+                    {/* <Card.Header className="result-header">
                         {final_type}
-                    </Card.Header>
+                    </Card.Header> */}
                     <Card.Body className="result-p">
                         <Card.Text>{final_desc}</Card.Text>
                     </Card.Body>

@@ -27,7 +27,8 @@ var TESTS = [
         info : {
             mainTitle:"프로 집콕러 테스트",
             subTitle:"이시국엔 집에 붙어 있자 꼭!",
-            mainUrl:"zipkok"
+            mainUrl:"zipkok",
+            scoreType:"numberScoring",
         },
         questions:[
             {
@@ -266,7 +267,8 @@ var TESTS = [
         info : {
             mainTitle:"도도리 테스트",
             subTitle:"이건 도도리야!",
-            mainUrl:"dodori"
+            mainUrl:"dodori",
+            scoreType:"typeCounting",
         },
         questions:[
             {
@@ -472,32 +474,25 @@ var TESTS = [
         ],
         results:[
             {
-                type: "Level 1. 초보 집콕러",
+                type: "사자",
                 desc: "집에 있으면 있지만 심심하면 집 밖을 나가고 싶어하는 \n 초보집콕러~ \n 아직은 집이랑 서먹서먹한 42~ \n 이틀이상 집에 있으면 나가고 싶어서 안달난 마치 라푼젤같은 그대! \n 집에 있다가도 나오라면 바로 나오는 오케이맨~!",
                 query: "1chqhwlqzhrfj",
                 score_range:range(26),
                 img_src:'https://dl.dropboxusercontent.com/s/fkt02q4cy8onjr7/zipkok_chqhwlqzhrfj.png?dl=0'
             },
             {
-                type: "Level 2. 선택형 집콕러",
+                type: "너구리",
                 desc: "주말엔 집에서 쉬는게 최고지만~~ \n 날 만나고 싶다면 ~ 나가줘야지~~~~ 뭐할건데? \n 꼭 재밌는 일이 있으면 무조건 튀어나가는 그대는 바로 \n 선택형 집콕러! \n 당신은 집에 있는 걸 좋아하지만 선택장애의 면모가 리를 빗 \n 있기때문에 친구들의 설득과 흥미 딘딘한 일이 있으면 \n 바로 집에서 튀어나가버리곤 하지~~",
                 query: "2tjsxorgudwlqzhrfj",
                 score_range:range(26, 51),
                 img_src:'https://dl.dropboxusercontent.com/s/m46a1ar0zsod71d/zipkok_tjsxorgudwlqzhrfj.png?dl=0'
             },
             {
-                type: "Level 3. 돌연변이 집콕러",
+                type: "펭귄",
                 desc: "극과극인 정말 집콕하고 싶을때 집에서 절대 나오지 않z...! \n 하지만 어느순간 또 약속 줄줄 잡아 버리는 그대! \n 성수기와 비성수기가 확실한 당신은 바로 \n 돌연변이 집콕러! \n 집에서도 밖에서도 최선을 다해 노는 당신! \n 한번 놀고 나면 꼭 충분한 휴식이 필요하지~",
                 query: "3ehfdusqusdlwlqzhrfj",
                 score_range:range(51, 75),
                 img_src:'https://dl.dropboxusercontent.com/s/vwl7j0xc5rrueev/zipkok_ehfdusqusdlwlqzhrfj.png?dl=0'
-            },
-            {
-                type: "Level 4. 프로 집콕러",
-                desc: "집이 곧 나의 삶의 전부일세, 당신은 바로 \n 프로 집콕러~ \n 집을 왜 나가~~ 집밖은 위험해~ \n 주변에 아무리 불러도 순순히 나가지 않지!! 마치 나는 신비주의~!! \n 하지만 그냥 나가기 귀찮은 사람 ^^ \n 개인적인 시간은 필수! 집에서 나가는 것 조차 큰 결심이 필요해요~ \n 집에 놀거리 가득하면 집 밖에 더더욱 안나갈 자신이 있어~~~~~",
-                query: "4vmfhwlqzhrfj",
-                score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/6jwrj44gjfi3g5g/zipkok_vmfhwlqzhrfj.png?dl=0'
             },
         ]
     },

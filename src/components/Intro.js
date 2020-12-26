@@ -21,15 +21,17 @@ class Intro extends Component {
             i = i + 1
         }
         // create answer option object for counting each question's answer
-        // var answer_obj = {};
-        // var j = 0;
-        // for(j=0;j<quizQuestions[0].answers.length;j++) {
-        // answer_obj[quizQuestions[0].answers[j].type] = 0;
-        // };
+        var _answer_type_obj = {};
+        var j = 0;
+        for(j=0;j<_current_test.questions[0].answers.length;j++) {
+            _answer_type_obj[_current_test.questions[0].answers[j].type] = 0;
+        };
         this.state = {
             mode:'intro',
             current_test:_current_test,
             qAndA:_current_test.questions,
+            scoreType:_current_test.info.scoreType,
+            answer_type_obj:_answer_type_obj, // < ------------- for calculating type += 1
             quizNumber:0,
             counted_score:0, // < ------------- for calculating scores
             result_url:'/result/',
@@ -45,6 +47,7 @@ class Intro extends Component {
     }
 
     introPageRender(){
+        
         let _mainTitle = this.state.current_test.info.mainTitle;
         let _subTitle = this.state.current_test.info.subTitle;
         
@@ -75,33 +78,75 @@ class Intro extends Component {
     }
 
     resultCaculator(){
-        let final_score = this.state.counted_score;
-        for (let k = 0; k < this.state.current_test.results.length; k++){
-            if(this.state.current_test.results[k].score_range.includes(final_score)){
-                return this.state.current_test.results[k];
+        if (this.state.scoreType === "numberScoring"){
+            let final_score = this.state.counted_score;
+            for (let k = 0; k < this.state.current_test.results.length; k++){
+                if(this.state.current_test.results[k].score_range.includes(final_score)){
+                    return this.state.current_test.results[k];
+                }
+            }
+        } else if (this.state.scoreType === "typeCounting") {
+            let final_result = this.state.answer_type_obj;
+            let keys = Object.keys(final_result);
+            let max = final_result[keys[0]];
+            let max_keys = [];
+            for (let z = 0 ; z < keys.length; z++) {
+                let value = final_result[keys[z]];
+                if (value > max) max = value
+            }
+            for (let key of keys) {
+                if(final_result[key] === max) {
+                    max_keys.push(key)
+                }
+            }
+            for (let z=0;z<this.state.current_test.results.length;z++){
+                if(max_keys[0] === this.state.current_test.results[z].type){
+                    return this.state.current_test.results[z]
+                }
             }
         }
+        
     }
     quizPageRender(){
         if(this.state.mode === "quiz"){
-            let _page = <Quiz
-            qAndA={this.state.qAndA}
-            quizNum={this.state.quizNumber}
-            onChangeMode={
-                function(_quizNum, _score, _mode) {
-                // e.preventDefault();
-                // <below for counting answers with TYPE(사자 너구리 펭귄 etc.)>
-                // var _answers = Object.assign({}, this.state.answers);
-                // _answers[_answer] = _answers[_answer] + 1;
-                let _scores = this.state.counted_score + Number(_score)
-                this.setState({
-                    quizNumber:_quizNum,
-                    // answers:_answers, <----- for counting answers with TYPE
-                    counted_score:_scores,
-                    mode:_mode
-                })
-            }.bind(this)}></Quiz>
-            return _page
+            // when the type is cummulative number scoring
+            if (this.state.scoreType === "numberScoring") {
+                let _page = <Quiz
+                qAndA={this.state.qAndA}
+                quizNum={this.state.quizNumber}
+                scoreType={this.state.scoreType}
+                onChangeMode={
+                    function(_quizNum, _score, _mode) {
+                    // e.preventDefault();
+                    let _scores = this.state.counted_score + Number(_score)
+                    this.setState({
+                        quizNumber:_quizNum,
+                        counted_score:_scores,
+                        mode:_mode
+                    })
+                }.bind(this)}></Quiz>
+                return _page
+            // when the type is each type counting
+            } else if (this.state.scoreType === "typeCounting") {
+                let _page = <Quiz
+                qAndA={this.state.qAndA}
+                quizNum={this.state.quizNumber}
+                scoreType={this.state.scoreType}
+                onChangeMode={
+                    function(_quizNum, _answer, _mode) {
+                    var _answer_obj = Object.assign({}, this.state.answer_type_obj);
+                    _answer_obj[_answer] = _answer_obj[_answer] + 1;
+                    this.setState({
+                        quizNumber:_quizNum,
+                        answer_type_obj:_answer_obj,
+                        mode:_mode
+                    })
+                }.bind(this)}></Quiz>
+                return _page
+            } else {
+                // do nothing yet but exception handling 
+            }
+            
         } else if(this.state.mode === "loading"){
             return(
                 <div className="loading-upper">

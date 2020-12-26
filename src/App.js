@@ -46,29 +46,23 @@ class App extends Component {
         <Switch>
 
           {/* go to "Intro" page */}
-          {/* {this.state.all_tests_url.map((item)=>(
+          {this.state.all_tests_url.map((item)=>(
             <Route
               path={item}
               component={() => <Intro test={item.replaceAll('/','')}/>}
               key={item.replaceAll('/','')}
               exact
             />
-          ))} */}
+          ))}
           {/* go to "Result to Start" page */}
-          {/* <Route path={this.state.all_tests_result_url} component={ResultToIntro} exact/> */}
+          <Route path={this.state.all_tests_result_url} component={ResultToIntro} exact/>
           {/* go to "Each Result contents" page */}
-          {/* {this.state.final_render_routes.map((item)=>(
+          {this.state.final_render_routes.map((item)=>(
             <Route
               path={'/'+item[1]+'/'+this.state.result_route+item[0]}
               component={Result}
               key={item[1]+'_'+item[0]} />
-          ))} */}
-          <Route
-              path={'/zipkok/'}
-              component={() => <Intro test={'zipkok'}/>}
-              key={'zipkok'}
-              exact
-            />
+          ))}
           {/* {quizResults.map((item, index) => (
             <Route
               path={this.state.test_main_url + this.state.result_route + item.query}

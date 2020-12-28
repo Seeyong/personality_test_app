@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Intro from './components/Intro'
 import ResultToIntro from './components/ResultToIntro'
 import TESTS from './api/TESTS'
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Result from './components/Result';
 
 class App extends Component {
@@ -44,7 +44,7 @@ class App extends Component {
     <Fragment>
       <Router basename="/personality_test_app/">
         <Switch>
-
+          <Link to="/zipkok">집콕</Link>
           {/* go to "Intro" page */}
           {this.state.all_tests_url.map((item)=>(
             <Route

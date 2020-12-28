@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Intro from './components/Intro'
 import ResultToIntro from './components/ResultToIntro'
 import TESTS from './api/TESTS'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Result from './components/Result';
 
 class App extends Component {
@@ -42,11 +42,8 @@ class App extends Component {
   render() {
     return(
     <Fragment>
-      {/* basename="/personality_test_app/" */}
-      <Router >
+      <Router basename="/personality_test_app/">
         <Switch>
-          <Link to="/zipkok">집콕</Link>
-          <Route path='/zipkok' component={() => <Intro test='zipkok'/>} exact/>
           {/* go to "Intro" page */}
           {this.state.all_tests_url.map((item)=>(
             <Route
@@ -84,3 +81,8 @@ export default App;
 
 // https://stackoverflow.com/questions/50644602/how-to-share-current-url-in-reactjs
 
+// in package.json
+// predeploy:&& npm run cname && npm run nojekyll
+// "cname": "echo k-test.net > build/CNAME",
+// "nojekyll": "echo > build/.nojekyll",
+// deploy:--add --dotfiles 

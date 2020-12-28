@@ -66,8 +66,7 @@ img {
 .intro-footer {
   margin: 6rem auto;
   font-family: var(--title-font);
-  color: grey;
-  opacity: 50%;
+  color: #cecfd0;
 }
 
 /* question & answer start */

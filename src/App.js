@@ -42,7 +42,8 @@ class App extends Component {
   render() {
     return(
     <Fragment>
-      <Router basename="/personality_test_app/">
+      {/* basename="/personality_test_app/" */}
+      <Router >
         <Switch>
           <Link to="/zipkok">집콕</Link>
           {/* go to "Intro" page */}

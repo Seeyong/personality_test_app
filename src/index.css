@@ -22,7 +22,7 @@ img {
   margin: 2rem auto;
 }
 .intro {
-  margin: 5rem auto;
+  margin: 2.5rem auto;
 }
 
 .logo-img {
@@ -173,7 +173,7 @@ img {
   font-family: var(--content-font);
   white-space: pre-line;
   word-break: keep-all;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   margin: 1.5rem auto;
 }
 

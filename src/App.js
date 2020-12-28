@@ -46,6 +46,7 @@ class App extends Component {
       <Router >
         <Switch>
           <Link to="/zipkok">집콕</Link>
+          <Route path='/zipkok' component={() => <Intro test='zipkok'/>} exact/>
           {/* go to "Intro" page */}
           {this.state.all_tests_url.map((item)=>(
             <Route

@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import QuestionCount from './QuestionCount'
 import Question from './Question'
-import quizQuestions from '../api/quizQuestions'
 import { Button } from 'react-bootstrap';
 
 class Quiz extends Component {
@@ -45,7 +44,7 @@ class Quiz extends Component {
                         value={qAndA.answers[i].score} 
                         onClick={function(e) {
                             e.preventDefault();
-                            if(this.props.quizNum === quizQuestions.length-1){
+                            if(this.props.quizNum === this.props.qAndA.length-1){
                                 this.props.onChangeMode(nextQuizNum, e.target.value, "loading"); //result
                             } else {
                                 this.setState({
@@ -66,7 +65,7 @@ class Quiz extends Component {
                         value={qAndA.answers[i].type}
                         onClick={function(e) {
                             e.preventDefault();
-                            if(this.props.quizNum === quizQuestions.length-1){
+                            if(this.props.quizNum === this.props.qAndA.length-1){
                                 this.props.onChangeMode(nextQuizNum, e.target.value, "loading"); //result
                             } else {
                                 this.setState({

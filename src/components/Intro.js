@@ -122,7 +122,9 @@ class Intro extends Component {
                         mode:_mode
                     })
                 }.bind(this)}></Quiz>
-                return _page
+                return(
+                    _page
+                ) 
             // when the type is each type counting
             } else if (this.state.scoreType === "typeCounting") {
                 let _page = <Quiz
@@ -143,6 +145,7 @@ class Intro extends Component {
             } else {
                 // do nothing yet but exception handling 
             }
+            return this._page
             
         } else if(this.state.mode === "loading"){
             return(

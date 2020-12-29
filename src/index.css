@@ -117,7 +117,8 @@ img {
 }
 
 .option-btn:focus,
-.option-btn:active {
+.option-btn:active,
+.option-btn:visited {
   outline: none;
   outline-offset: none;
   box-shadow: none;

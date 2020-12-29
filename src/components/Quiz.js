@@ -8,6 +8,7 @@ class Quiz extends Component {
         super(props)
         this.state = {
             quizCount:0,
+            appearQuiz:true,
         }
     }
     // the function below is for option randomize

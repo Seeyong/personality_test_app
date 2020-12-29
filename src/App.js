@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import MainPage from './components/MainPage';
 import Intro from './components/Intro'
 import ResultToIntro from './components/ResultToIntro'
 import TESTS from './api/TESTS'
@@ -43,7 +44,12 @@ class App extends Component {
     return(
     <Fragment>
       <Router basename="/personality_test_app/">
+        
         <Switch>
+          {/* "Main" page */}
+          <Route path='/' exact>
+            <MainPage/>
+          </Route>
           {/* go to "Intro" page */}
           {this.state.all_tests_url.map((item)=>(
             <Route

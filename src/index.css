@@ -14,6 +14,33 @@ body {
   justify-content: center;
 }
 
+/* main start */
+
+.main-link-div {
+  max-width: 550;
+}
+
+.main-link-block {
+  display: inline-block;
+  margin: auto 2rem;
+}
+
+.main-card {
+  margin: 2rem auto;
+  width: 280px;
+  height: 284px;
+  color: var(--bg-color);
+  border-radius: 7%;
+  background-color: #c17675;
+  font-family: var(--title-font);
+}
+
+.test-img {
+  margin: 2rem auto;
+  width: 240px;
+  height: 150px;
+}
+
 /* intro start */
 
 img {

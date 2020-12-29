@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom'
 import Logo from '../k_test_logo.png'
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import TESTS from '../api/TESTS'
 
 class MainPage extends Component{
@@ -34,34 +34,12 @@ class MainPage extends Component{
                                     src={item[1]}
                                     className="test-img"/>
                                 <Card.Body>
-                                    <Card.Text><h4>{item[2]}</h4></Card.Text>
+                                    <Card.Text>{item[2]}</Card.Text>
                                 </Card.Body>
                             </Card>
                             
                         </Link>
                     ))}
-                    {/* <Link to="/zipkok/" className="main-link-block">
-                        <Card className="main-card">
-                            <Card.Img
-                                src='https://dl.dropboxusercontent.com/s/fkt02q4cy8onjr7/zipkok_chqhwlqzhrfj.png?dl=0'
-                                className="test-img"/>
-                            <Card.Body>
-                                <Card.Text><h3>집콕 레벨 테스트</h3></Card.Text>
-                            </Card.Body>
-                        </Card>
-                        
-                    </Link>
-                    <Link to="/zipkok/" className="main-link-block">
-                        <Card className="main-card">
-                            <Card.Img
-                                src='https://dl.dropboxusercontent.com/s/fkt02q4cy8onjr7/zipkok_chqhwlqzhrfj.png?dl=0'
-                                className="test-img"/>
-                            <Card.Body>
-                                <Card.Text><h3>집콕 레벨 테스트</h3></Card.Text>
-                            </Card.Body>
-                        </Card>
-                        
-                    </Link> */}
                 </div>
             </Fragment>
             

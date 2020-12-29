@@ -17,18 +17,18 @@ body {
 /* main start */
 
 .main-link-div {
-  max-width: 550;
+  margin: auto 1rem;
 }
 
 .main-link-block {
   display: inline-block;
-  margin: auto 2rem;
+  margin: auto 1rem;
 }
 
 .main-card {
   margin: 2rem auto;
-  width: 280px;
-  height: 284px;
+  width: 150px;
+  height: 240px;
   color: var(--bg-color);
   border-radius: 7%;
   background-color: #c17675;
@@ -37,8 +37,7 @@ body {
 
 .test-img {
   margin: 2rem auto;
-  width: 240px;
-  height: 150px;
+  height: 100px;
 }
 
 /* intro start */
@@ -241,6 +240,12 @@ img {
   font-family: var(--title-font);
   display: inline;
   margin: 3rem 1rem;
+}
+
+.back-to-main {
+  font-family: var(--title-font);
+  display: inline;
+  margin: 3rem 1rem 0rem;
 }
 
 /* result guide start */

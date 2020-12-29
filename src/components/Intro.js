@@ -4,7 +4,7 @@ import Result from './Result'
 import Loading from './Loading'
 import TESTS from '../api/TESTS'
 import Logo from '../k_test_logo.png'
-import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
 
@@ -69,9 +69,6 @@ class Intro extends Component {
                         bsPrefix="btn"
                     >시작하기
                     </Button>
-                </div>
-                <div className="intro-footer">
-                    <p>MAKER - 케이테스트</p>
                 </div>
             </div>
         );
@@ -193,4 +190,4 @@ class Intro extends Component {
     }
 }
 
-export default Intro;
+export default withRouter(Intro);

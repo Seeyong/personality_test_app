@@ -3,7 +3,7 @@ import MainPage from './components/MainPage';
 import Intro from './components/Intro'
 import ResultToIntro from './components/ResultToIntro'
 import TESTS from './api/TESTS'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import Result from './components/Result';
 
 class App extends Component {
@@ -39,17 +39,29 @@ class App extends Component {
       final_render_routes:_final_render_routes,
     }
   }
+  // componentDidMount(){
+  //   window.location.reload();
+  // }
+
+  reloadPage() { 
+    var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
+    var now = Date.now(); 
+    var tenSec = 10 * 1000;
+    var plusTenSec = currentDocumentTimestamp + tenSec;
+    if (now > plusTenSec) { window.location.reload(); } else {}
+  }
 
   render() {
     return(
     <Fragment>
+      {this.reloadPage()}
       <Router basename="/personality_test_app/">
-        
         <Switch>
           {/* "Main" page */}
           <Route path='/' exact>
             <MainPage/>
           </Route>
+
           {/* go to "Intro" page */}
           {this.state.all_tests_url.map((item)=>(
             <Route
@@ -59,6 +71,7 @@ class App extends Component {
               exact
             />
           ))}
+
           {/* go to "Result to Start" page */}
           <Route path={this.state.all_tests_result_url} component={ResultToIntro} exact/>
           {/* go to "Each Result contents" page */}
@@ -68,14 +81,14 @@ class App extends Component {
               component={Result}
               key={item[1]+'_'+item[0]} />
           ))}
-          {/* {quizResults.map((item, index) => (
-            <Route
-              path={this.state.test_main_url + this.state.result_route + item.query}
-              component={() => <Result result={item}/>}
-              key={index} exact/>
-          ))} */}
         </Switch>
       </Router>
+      {/* footer */}
+      <div className="intro-footer">
+          <p>MAKER - 케이테스트</p>
+          <h5>광고 및 후원 문의</h5>
+          <p>info@k-test.net</p>
+      </div>
     </Fragment>
     )
   }
@@ -83,7 +96,7 @@ class App extends Component {
 }
 
 
-export default App;
+export default withRouter(App);
 
 // https://stackoverflow.com/questions/50644602/how-to-share-current-url-in-reactjs
 

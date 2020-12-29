@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/personality_test_app/static/css/main.b852a4a4.chunk.css",
-    "main.js": "/personality_test_app/static/js/main.8809b197.chunk.js",
-    "main.js.map": "/personality_test_app/static/js/main.8809b197.chunk.js.map",
+    "main.css": "/personality_test_app/static/css/main.1a307acc.chunk.css",
+    "main.js": "/personality_test_app/static/js/main.009a9890.chunk.js",
+    "main.js.map": "/personality_test_app/static/js/main.009a9890.chunk.js.map",
     "runtime-main.js": "/personality_test_app/static/js/runtime-main.982701cf.js",
     "runtime-main.js.map": "/personality_test_app/static/js/runtime-main.982701cf.js.map",
-    "static/js/2.d3e0d565.chunk.js": "/personality_test_app/static/js/2.d3e0d565.chunk.js",
-    "static/js/2.d3e0d565.chunk.js.map": "/personality_test_app/static/js/2.d3e0d565.chunk.js.map",
+    "static/js/2.4955db6f.chunk.js": "/personality_test_app/static/js/2.4955db6f.chunk.js",
+    "static/js/2.4955db6f.chunk.js.map": "/personality_test_app/static/js/2.4955db6f.chunk.js.map",
     "static/js/3.41748a1c.chunk.js": "/personality_test_app/static/js/3.41748a1c.chunk.js",
     "static/js/3.41748a1c.chunk.js.map": "/personality_test_app/static/js/3.41748a1c.chunk.js.map",
     "index.html": "/personality_test_app/index.html",
-    "static/css/main.b852a4a4.chunk.css.map": "/personality_test_app/static/css/main.b852a4a4.chunk.css.map",
-    "static/js/2.d3e0d565.chunk.js.LICENSE.txt": "/personality_test_app/static/js/2.d3e0d565.chunk.js.LICENSE.txt",
+    "static/css/main.1a307acc.chunk.css.map": "/personality_test_app/static/css/main.1a307acc.chunk.css.map",
+    "static/js/2.4955db6f.chunk.js.LICENSE.txt": "/personality_test_app/static/js/2.4955db6f.chunk.js.LICENSE.txt",
     "static/media/k_test_logo.7d0fe144.png": "/personality_test_app/static/media/k_test_logo.7d0fe144.png"
   },
   "entrypoints": [
     "static/js/runtime-main.982701cf.js",
-    "static/js/2.d3e0d565.chunk.js",
-    "static/css/main.b852a4a4.chunk.css",
-    "static/js/main.8809b197.chunk.js"
+    "static/js/2.4955db6f.chunk.js",
+    "static/css/main.1a307acc.chunk.css",
+    "static/js/main.009a9890.chunk.js"
   ]
 }

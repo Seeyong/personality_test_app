@@ -54,15 +54,12 @@ class App extends Component {
   render() {
     return(
     <Fragment>
-      {this.reloadPage()}
+      {/* {this.reloadPage()} */}
       <Router basename="/personality_test_app/">
         <Switch>
           {/* "Main" page */}
           <Route path='/' exact>
-            
               <MainPage/>
-            
-            
           </Route>
 
           {/* go to "Intro" page */}
@@ -90,7 +87,7 @@ class App extends Component {
       <div className="intro-footer">
           <p>MAKER - 케이테스트</p>
           <h5>광고 및 후원 문의</h5>
-          <p>info@k-test.net</p>
+          <p>skjoldenstore@gmail.com</p>
       </div>
     </Fragment>
     )

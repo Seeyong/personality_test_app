@@ -55,7 +55,8 @@ class App extends Component {
     return(
     <Fragment>
       {/* {this.reloadPage()} */}
-      <Router basename="/personality_test_app/">
+      {/* basename="/personality_test_app/" */}
+      <Router >
         <Switch>
           {/* "Main" page */}
           <Route path='/' exact>
@@ -74,12 +75,13 @@ class App extends Component {
 
           {/* go to "Result to Start" page */}
           <Route path={this.state.all_tests_result_url} component={ResultToIntro} exact/>
+
           {/* go to "Each Result contents" page */}
           {this.state.final_render_routes.map((item)=>(
             <Route
               path={'/'+item[1]+'/'+this.state.result_route+item[0]}
               component={Result}
-              key={item[1]+'_'+item[0]} />
+              key={item[1]+'_'+item[0]} exact/>
           ))}
         </Switch>
       </Router>

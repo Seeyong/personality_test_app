@@ -55,19 +55,12 @@ class App extends Component {
     return(
     <Fragment>
       {/* {this.reloadPage()} */}
-      {/* basename="/personality_test_app/" */}
       <Router >
         <Switch>
           {/* "Main" page */}
           <Route path='/' exact>
               <MainPage/>
           </Route>
-          <Route
-              path='daengdaeng/'
-              component={() => <Intro test='daengdaeng'/>}
-              key='daengdaeng'
-              exact
-            />
           {/* go to "Intro" page */}
           {this.state.all_tests_url.map((item)=>(
             <Route

@@ -33,7 +33,6 @@ class Result extends Component {
 
         const current_tests_path = '/' + this.state.current_test + '/';
         return(
-            // basename="/personality_test_app"
             <Router > 
                 <Switch>
                     <Route path={current_tests_path} component={()=><Intro test={this.state.current_test}/>} exact/>
@@ -83,7 +82,6 @@ class Result extends Component {
 
     mainPageRender(){
         return(
-            // basename="/personality_test_app/"
             <Router > 
                 <Switch>
                     <Route path='/' component={App} exact/>

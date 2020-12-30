@@ -162,24 +162,11 @@ class Intro extends Component {
             let final_score_query = result_contents.query // <----------------query export
             
             return(
-                // "/personality_test_app/"+
                 <Router basename={this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query} component={Result}/>
                     <Redirect to={this.state.result_url+final_score_query} />
                     {/* <Result result={result_contents}/> */}
                 </Router>
-                    // Router doesn't work in github page
-                    // <Router basename={this.state.quiz_url}>
-                    //     <Switch>
-                            
-                    //         <Route
-                    //             path={this.state.result_url} // this.props.location.pathname + 
-                    //             component={() => <Result answers={this.state.answers}/>
-                    //         } exact/>
-                    //         <Redirect to={this.state.result_url} />
-                    //     </Switch>
-                    // </Router>
-
             )   
         }
     }

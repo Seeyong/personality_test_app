@@ -62,7 +62,12 @@ class App extends Component {
           <Route path='/' exact>
               <MainPage/>
           </Route>
-
+          <Route
+              path='daengdaeng/'
+              component={() => <Intro test='daengdaeng'/>}
+              key='daengdaeng'
+              exact
+            />
           {/* go to "Intro" page */}
           {this.state.all_tests_url.map((item)=>(
             <Route

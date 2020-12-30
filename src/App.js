@@ -107,4 +107,4 @@ export default withRouter(App);
 // predeploy:&& npm run cname && npm run nojekyll
 // "cname": "echo k-test.net > build/CNAME",
 // "nojekyll": "echo > build/.nojekyll",
-// deploy:--add --dotfiles 
+// deploy:"gh-pages --add --dotfiles -d build"

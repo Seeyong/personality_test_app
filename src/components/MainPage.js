@@ -28,17 +28,17 @@ class MainPage extends Component{
                 </div>
                 <div className="main-link-div">
                     {this.state.all_tests_url.map((item)=>(
-                        <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                            <Card className="main-card">
-                                <Card.Img
-                                    src={item[1]}
-                                    className="test-img"/>
-                                <Card.Body>
-                                    <Card.Text>{item[2]}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                            
-                        </Link>
+                            <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
+                                <Card className="main-card">
+                                    <Card.Img
+                                        src={item[1]}
+                                        className="test-img"/>
+                                    <Card.Body>
+                                        <Card.Text>{item[2]}</Card.Text>
+                                    </Card.Body>
+                                </Card>
+                                
+                            </Link>
                     ))}
                 </div>
             </Fragment>

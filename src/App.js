@@ -59,7 +59,10 @@ class App extends Component {
         <Switch>
           {/* "Main" page */}
           <Route path='/' exact>
-            <MainPage/>
+            
+              <MainPage/>
+            
+            
           </Route>
 
           {/* go to "Intro" page */}

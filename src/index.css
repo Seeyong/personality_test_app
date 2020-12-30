@@ -122,8 +122,15 @@ img {
   outline: none;
   outline-offset: none;
   box-shadow: none;
-  background-color: #c17675;
-  color: var(--bg-color);
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+/* unselect clicked btn */
+.btn-outline-dark:hover {
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  font-weight: normal;
 }
 
 .option-btn {
@@ -135,9 +142,9 @@ img {
   margin: 0.5em;
   word-break: keep-all;
   white-space: pre-line;
-  background-color: #c17675;
-  color: var(--bg-color);
-  border-color: #c17675;
+  /* background-color: #c17675; */
+  /* color: var(--font-color); */
+  /* border-color: #c17675; */
 }
 
 .question-progress {

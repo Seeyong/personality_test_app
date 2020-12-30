@@ -75,7 +75,7 @@ class Quiz extends Component {
                                 this.props.onChangeMode(nextQuizNum, e.target.value, "quiz");
                             }
                         }.bind(this)}
-                        variant="dark" 
+                        variant="outline-dark" 
                         size="lg"
                         className="option-btn"
                     >{qAndA.answers[i].content}</Button>)

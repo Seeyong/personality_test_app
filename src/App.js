@@ -54,7 +54,7 @@ class App extends Component {
   render() {
     return(
     <Fragment>
-      {/* {this.reloadPage()} */}
+      {this.reloadPage()}
       <Router basename="/personality_test_app/">
         <Switch>
           {/* "Main" page */}
@@ -98,14 +98,18 @@ class App extends Component {
 
 export default withRouter(App);
 
-// https://stackoverflow.com/questions/50644602/how-to-share-current-url-in-reactjs
+// <<in package.json>>
+// below just use github domain
+// "scripts": {
+//   "start": "react-scripts start",
+//   "build": "react-scripts build",
+//   "test": "react-scripts test",
+//   "eject": "react-scripts eject",
+//   "predeploy": "npm run build",
+//   "deploy": "gh-pages -d build"
+// },
 
-// in package.json
-// predeploy:&& npm run cname && npm run nojekyll
-// "cname": "echo k-test.net > build/CNAME",
-// "nojekyll": "echo > build/.nojekyll",
-// deploy:"gh-pages --add --dotfiles -d build"
-
+// below use custom domain
 // "scripts": {
 //   "start": "react-scripts start",
 //   "build": "react-scripts build",

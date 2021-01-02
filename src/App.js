@@ -55,7 +55,7 @@ class App extends Component {
     return(
     <Fragment>
       {/* {this.reloadPage()} */}
-      <Router >
+      <Router basename="/personality_test_app/">
         <Switch>
           {/* "Main" page */}
           <Route path='/' exact>

@@ -105,3 +105,14 @@ export default withRouter(App);
 // "cname": "echo k-test.net > build/CNAME",
 // "nojekyll": "echo > build/.nojekyll",
 // deploy:"gh-pages --add --dotfiles -d build"
+
+// "scripts": {
+//   "start": "react-scripts start",
+//   "build": "react-scripts build",
+//   "test": "react-scripts test",
+//   "eject": "react-scripts eject",
+//   "cname": "echo test.k-test.net > build/CNAME",
+//   "nojekyll": "echo > build/.nojekyll",
+//   "predeploy": "npm run build && npm run cname && npm run nojekyll",
+//   "deploy": "gh-pages --add --dotfiles -d build"
+// },
